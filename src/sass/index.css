@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 10px;
+  width: 100%;
+  background-color: #ffffff;
+  position: fixed;
+}
+
+.nav__logo {
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.nav-links_continer {
+  width: calc(85% - 200px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.nav__links {
+  color: #000;
+  text-decoration: none;
+  margin: 0px 15px;
+  font-weight: 500;
+}
+
+.nav__links:hover {
+  color: #737373;
+}
+
+.nav-icons_continer {
+  margin-top: 4px;
+  width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.nav__icon {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.nav__icon:hover {
+  color: #737373;
+}
+
+.nav--scroll {
+  background-color: #ffffff;
+  position: fixed;
+}
+
+.home .frontpage {
+  margin: 0px 10px;
+}
+
+.home .frontpage__img {
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.home .jewelry-categories .jewelry {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 10px;
+}
+
+.home .jewelry-categories .jewelry_container {
+  position: relative;
+  padding-bottom: 100%;
+}
+
+.home .jewelry-categories .jewelry__img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.home .jewelry-categories .jewelry__caption_container {
+  position: absolute;
+  z-index: 1;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home .jewelry-categories .jewelry__caption-category {
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.home .jewelry-categories .jewelry__caption-shop {
+  text-align: center;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 520px) {
+  .home .jewelry-categories .jewelry {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .home .jewelry-categories .jewelry_container {
+    padding-bottom: 60%;
+  }
+}
+/*# sourceMappingURL=index.css.map */

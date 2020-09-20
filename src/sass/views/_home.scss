@@ -1,0 +1,200 @@
+.home {
+  .frontpage {
+    margin: 0px 10px;
+
+    &_continer {
+      position: relative;
+    }
+
+    &__img {
+      width: 100%;
+      object-fit: fill;
+    }
+
+    &__caption {
+      position: absolute;
+      bottom: 10%;
+      left: 40%;
+      transform: translate(-50%, -20%);
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (max-width: 475px) {
+        &{
+          left: 50%;
+          bottom: -10%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &-header {
+        color: #fff;
+        font-size: 26px;
+        border-bottom: 1px solid white;
+        width: 300px;
+      }
+      &-text {
+        color: #fff;
+        font-size: 40px;
+        font-weight: 700;
+        @media screen and (max-width: 775px) {
+          &{
+            font-size: 22px;
+          }
+        }
+      }
+      &-shop {
+        @include button-img;
+      }
+    }
+  }
+
+  .jewelry-categories {
+    .jewelry {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 10px;
+
+      &__header {
+        @include header-text;
+        text-align: center;
+      }
+
+      &_container {
+        position: relative;
+        padding-bottom: 100%;
+      }
+
+      &__img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        @media screen and (min-width: 1300px) {
+          & {
+            height: 80%;
+            width: 80%;
+          }
+        }
+      }
+
+      &__caption_container {
+        position: absolute;
+        z-index: 1;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: 1300px) {
+          & {
+            top: 30%;
+          }
+        }
+      }
+      &__caption-category {
+        @include header-text;
+      }
+      &__caption-shop {
+        @include button;
+      }
+    }
+    @media screen and (max-width: 775px) {
+      .jewelry {
+        grid-template-columns: 1fr;
+        &_container {
+          padding-bottom: 60%;
+        }
+        &__img {
+          height: 90%;
+          width: 90%;
+        }
+        &__caption_container {
+          top: 30%;
+        }
+      }
+    }
+  }
+
+  .newcollection {
+    position: relative;
+
+    &__header {
+      @include header-text;
+      margin-bottom: 20px;
+    }
+
+    &__img {
+      height: 70%;
+      width: 100%;
+    }
+
+    &__text_contianer {
+      position: absolute;
+      right: 10%;
+      bottom: 20%;
+      width: 250px;
+      margin: 10px;
+      display:flex;
+      flex-direction: column;
+
+      @media screen and (max-width: 775px) {
+        & {
+          right: 5%;
+          bottom: 10%;
+        }
+      }
+      @media screen and (max-width: 575px) {
+        & {
+          position: static;
+        }
+      }
+    }
+    &__text-header {
+      @include header-text;
+      font-size: 24px;
+    }
+    &__text {
+      margin: 10px 0px;
+    }
+
+    &__button {
+      @include button-img;
+      width: 100%;
+      @media screen and (max-width: 575px) {
+        &{
+          border: solid 1px #000;
+        }
+      }
+    }
+    @media screen and (min-width: 1175px) {
+      &{
+        &__text_contianer{
+          width: 350px;
+        }
+        &__text-header {
+          font-size: 1.4rem;
+        }
+        &__text {
+          font-size: 1.4rem;
+        }
+    
+        &__button {
+          font-size: 1.4rem;
+        }
+      }
+    }
+    @media screen and (max-width: 575px) {
+      & {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}
