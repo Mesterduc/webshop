@@ -1,0 +1,20 @@
+.burger-menu {
+  
+  width: calc(100% - 190px);
+  justify-content: flex-end;
+  display: none;
+  
+  &__icon{
+    font-size: 33px;
+    cursor: pointer;
+  }
+
+  &--active{
+  }
+
+  @media screen and (max-width: 775px) {
+    &{
+      display: flex;
+    }
+  }
+}

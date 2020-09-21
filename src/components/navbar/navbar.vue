@@ -8,31 +8,35 @@
       </router-link>
     </div>
     <section class="nav-links_container">
-      <router-link class="nav__links" v-for="nav in navbar" :key="nav.link" :to="nav.link">{{nav.name}}</router-link>
+      <router-link
+       class="nav__links"
+        v-for="nav in navbar"
+        :key="nav.link"
+         :to="nav.link"
+       >{{nav.name}}</router-link>
     </section>
     <section class="nav-icons_container">
       <i class="nav__icon fas fa-user-alt"></i>
       <i class="nav__icon fas fa-globe"></i>
       <i class="nav__icon fas fa-shopping-cart"></i>
     </section>
-
-    <section class="burger-menu">
-      <i class="burger-menu__icon fas fa-bars"></i>
-
-    </section>
+    <!-- <Burgermenu> </Burgermenu> -->
   </section>
 </template>
 
 <script>
+// import { mapState } from 'vuex'
+// import { mapState } from '../../store/modules/navbar'
+
+import Burgermenu from "./burgermenu";
+
 export default {
+  components: {
+    Burgermenu
+  },
   data() {
     return {
-      navbar: [
-        { name: 'Home', link:'/'},
-        { name: 'About', link:'/About'},
-        { name: 'Smykker', link:'/Smykker'},
-        { name: 'Workshop', link:'/Workshop'},
-      ],
+      navbar: this.$store.state.BurgerMenu.navbar,
       NavbarFixed: true,
       lastScrollPosition: 0,
     };

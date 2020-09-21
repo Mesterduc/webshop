@@ -1,24 +1,38 @@
 <template>
   <div>
     <Navbar></Navbar>
-     <Burgermenu></Burgermenu>
-    <Sidebar2></Sidebar2>
+    <!-- <Sidebar2>
+      <ul class="sidebar-panel-nav">
+       <li><a href="#home">Home</a></li>
+       <li><a href="#about">About</a></li>
+       <li><a href="#contact">Contact</a></li>
+     </ul>
+    </Sidebar2> -->
   </div> 
 </template>
 
 <script>
-import Burgermenu from "./burgermenu";
 import Navbar from "./navbar";
-import Sidebar2 from "./sidebar";
+// import Sidebar2 from "./sidebar";
 
 export default {
   components: {
-    Burgermenu,
     Navbar,
-    Sidebar2,
+    // Sidebar2,
   },
 };
 </script>
 
 <style>
+ ul.sidebar-panel-nav {
+   list-style-type: none;
+ }
+
+ ul.sidebar-panel-nav > li > a {
+   color: #fff;
+   text-decoration: none;
+   font-size: 1.5rem;
+   display: block;
+   padding-bottom: 0.5em;
+ }
 </style>

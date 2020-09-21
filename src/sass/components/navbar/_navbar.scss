@@ -64,13 +64,4 @@
     }
   }
 }
-.burger-menu {
-  display: flex;
-  width: calc(100% - 220px);
-  justify-content: flex-end;
-  display: none;
 
-  &__icon{
-    font-size: 33px;
-  }
-}
