@@ -50,6 +50,7 @@
   }
 
   .jewelry-categories {
+    margin: 10px 0;
     .jewelry {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -122,6 +123,7 @@
   }
 
   .newcollection {
+    margin: 10px 0;
     position: relative;
 
     &__header {
@@ -197,4 +199,6 @@
       }
     }
   }
+
+  //instagram
 }

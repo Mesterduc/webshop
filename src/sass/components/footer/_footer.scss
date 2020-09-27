@@ -70,4 +70,13 @@
       grid-row-start: 1;
     }
   }
+  @media screen and (max-width: 578px) {
+    & {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__newsletter {
+      grid-column-start: 1;
+      grid-column-end: 1;
+    }
+  }
 }

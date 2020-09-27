@@ -1,9 +1,13 @@
 <template>
   <section class="sidebar">
-    <div class="sidebar-backdrop" @click="closeSidebarPanel" v-if="isPanelOpen"></div>
+    <div class="sidebar__backdrop" @click.prevent="closeSidebarPanel" v-if="menu"></div>
     <transition name="slide">
-      <div v-if="isPanelOpen" class="sidebar-panel">
-        <slot></slot>
+      <div v-if="menu" class="sidebar__panel">
+        <ul class="sidebar__nav">
+          <li v-for="nav in navbar" :key="nav.link">
+             <a class="sidebar__link" :href="nav.link">{{nav.name}}</a>
+          </li>
+        </ul>
       </div>
     </transition>
   </section>
@@ -13,38 +17,21 @@
 export default {
   data() {
     return {
-      isPanelOpen: true,
+      navbar: this.$store.state.BurgerMenu.navbar,
     };
+  },
+  computed: {
+    menu() {
+      return this.$store.state.BurgerMenu.menu;
+    },
   },
   methods: {
     closeSidebarPanel() {
-      this.isPanelOpen = false;
+      this.$store.dispatch("toggleActive");
     },
   },
 };
 </script>
 
 <style>
-.sidebar-backdrop {
-        background-color: rgba(0,0,0,.5);
-        width: 100vw;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: 0;
-        cursor: pointer;
-        z-index: 9;
-    }
-
-    .sidebar-panel {
-        overflow-y: auto;
-        background-color: #130f40;
-        position: fixed;
-        left: 0;
-        top: 0;
-        height: 100vh;
-        z-index: 999;
-        padding: 3rem 20px 2rem 20px;
-        width: 300px;
-    }
 </style>

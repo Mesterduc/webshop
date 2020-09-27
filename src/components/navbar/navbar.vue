@@ -20,13 +20,11 @@
       <i class="nav__icon fas fa-globe"></i>
       <i class="nav__icon fas fa-shopping-cart"></i>
     </section>
-    <!-- <Burgermenu> </Burgermenu> -->
+    <Burgermenu> </Burgermenu>
   </section>
 </template>
 
 <script>
-// import { mapState } from 'vuex'
-// import { mapState } from '../../store/modules/navbar'
 
 import Burgermenu from "./burgermenu";
 

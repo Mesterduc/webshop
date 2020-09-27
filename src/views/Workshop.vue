@@ -1,5 +1,5 @@
 <template>
-  <h1>workshop</h1>
+  <h1>workshop blog</h1>
 </template>
 
 <script>

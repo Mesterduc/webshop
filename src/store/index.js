@@ -6,12 +6,6 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    // navbar: [
-    //   { name: "Home", link: "/" },
-    //   { name: "About", link: "/About" },
-    //   { name: "Smykker", link: "/Smykker" },
-    //   { name: "Workshop", link: "/Workshop" },
-    // ],
   },
   mutations: {
   },

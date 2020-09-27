@@ -1,8 +1,7 @@
 <template>
    <section class="burger-menu"
-   :class="{ 'burger-menu--active' : isBurgerActive }"
-         @click.prevent="toggle">
-      <i class="burger-menu__icon fas fa-bars"></i>
+         >
+      <i @click.prevent="toggle" class="burger-menu__icon fas fa-bars"></i>
 
     </section>
 </template>
@@ -11,12 +10,17 @@
 export default {
   data() {
     return {
-      isBurgerActive: false,
+    }
+  },
+  computed: {
+    menu() {
+      return this.$store.state.BurgerMenu.menu
     }
   },
   methods: {
     toggle() {
-      this.isBurgerActive = !this.isBurgerActive
+      this.$store.dispatch('toggleActive')
+      
     }
   },
 

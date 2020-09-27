@@ -19,6 +19,20 @@
         </figcaption>
       </figure>
     </section>
+    <!-- frontpage highlight products -->
+    <section class="products"></section>
+    
+    <section class="newcollection">
+      <header class="newcollection__header">This season's new trends</header>
+      <img class="newcollection__img" src="../assets/images/newcollection2.jpg" alt />
+      <div class="newcollection__text_contianer">
+        <span class="newcollection__text-header">Get the newest look</span>
+        <p
+          class="newcollection__text"
+        >Necklace, rings, statemens and more, exclusively avaliable this fall.</p>
+        <router-link class="newcollection__button" to="#"> New arrivals</router-link>
+      </div>
+    </section>
     <section class="jewelry-categories">
         <header class="jewelry__header">Shop By Category</header>
       <div class="jewelry">
@@ -45,24 +59,8 @@
         </figure>
       </div>
     </section>
-    <!-- <section class="about">
-      <div class="about-text_container">
-        <span class="about__header"></span>
-        <p class="about__text"></p>
-      </div>
-      <img class="about__img" src="#" alt="about-img">
-    </section>-->
-    <section class="newcollection">
-      <header class="newcollection__header">This season's new trends</header>
-      <img class="newcollection__img" src="../assets/images/newcollection2.jpg" alt />
-      <div class="newcollection__text_contianer">
-        <span class="newcollection__text-header">Get the newest look</span>
-        <p
-          class="newcollection__text"
-        >Necklace, rings, statemens and more, exclusively avaliable this fall.</p>
-        <router-link class="newcollection__button" to="#"> New arrivals</router-link>
-      </div>
-    </section>
+    <!-- instagram -->
+    <section class="instram"></section>
   </section>
 </template>
 
