@@ -1,0 +1,27 @@
+.jewelry {
+	&_header {
+		display: flex;
+		justify-content: center;
+
+		&-container {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+		}
+	}
+	&_category {
+		font-size: 4rem;
+		font-weight: 800;
+		text-align: center;
+	}
+	&_undercategory {
+		&-container {
+			display: flex;
+            justify-content: center;
+            text-transform: uppercase;
+		}
+
+        padding: 0px 20px;
+        font-size: 1.3rem;
+	}
+}
