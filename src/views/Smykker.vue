@@ -33,7 +33,7 @@ export default {
 	computed: {
 		...mapState({
 			Category: (state) => state.Category.category,
-		}),
+		})
 	},
 	created() {
 		this.categoryName = this.$route.name
