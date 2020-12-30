@@ -4,9 +4,15 @@
     <transition name="slide">
       <div v-if="menu" class="sidebar__panel">
         <ul class="sidebar__nav">
-          <li v-for="nav in navbar" :key="nav.link">
+          <!-- <li v-for="nav in navbar" :key="nav.link">
              <a class="sidebar__link" :href="nav.link">{{nav.name}}</a>
-          </li>
+          </li> -->
+          <router-link
+       class="nav__links"
+        v-for="nav in navbar"
+        :key="nav.link"
+         :to="nav.link"
+       >{{nav.name}}</router-link>
         </ul>
       </div>
     </transition>
