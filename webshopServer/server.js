@@ -24,6 +24,8 @@ mongoose.connect(config.database, {
   }
 )
 
+// app.use('../public', express.static( '../public'))
+
 const products = require('./routes/api/products')
 app.use('/products', products)
 // require('./routes/index')

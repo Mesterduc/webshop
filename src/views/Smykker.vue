@@ -14,13 +14,18 @@
 		<section class="sort"></section>
 		<section class="shop"></section>
 		<section class="products">
+			<!-- Du skal bruge webpack for at dynamisk at kunne hente billede path
+				da path bilver ændret i compile time og vue virker i run time
+			  -->
 			<div v-for="products in Products.products" :key="products._id">
 				{{ products.name }}
 				<p>{{ products.price }}</p>
 				<p>{{ products.img[0] }}</p>
+				<img :src="products.img[0]" alt="">
+				<img :src="test" alt="">
+				<!-- <img src="../../public/uploads/adalsfad/test.png"> -->
 				<p>{{ products.desc }}</p>
 			</div>
-
 			<br />
 			<span>{{ Products.test1 }}</span>
 		</section>
@@ -37,6 +42,7 @@ export default {
 	data() {
 		return {
 			categoryName: [],
+			test: "../../public/uploads/adalsfad/test.png"
 		}
 	},
 	computed: {
@@ -44,6 +50,11 @@ export default {
 			Category: (state) => state.Category.category,
 			Products: (state) => state.Products,
 		}),
+	},
+	methods: {
+		getImgPath(pic){
+			// return require('../' + pic)
+		}
 	},
 	created() {
 		// this.categoryName = this.$route.name

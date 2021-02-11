@@ -17,8 +17,17 @@ router.get('/', async (req, res) => {
 })
 
 router.post('/', multer.upload.array('img', 6), async (req, res, next) => {
-	var paths = req.files.map(file => file.path)
-	console.log(paths)
+	var paths = req.files.map(file =>  JSON.stringify(file.path).replace(/\\\\/g, '/') )
+	
+	
+	// console.log(paths)
+	// paths.replace(/\\/g, '/')
+	// console.log(paths.ToString())
+	// let hej = JSON.stringify(paths).replace(/\\/g, '/')
+	// console.log(req.file)
+	// console.log(req.files.destination)
+	// let hej = req.file.path.replace(/\\/g,'/')
+	// paths.replace
 	await Product.create(
 		{
 			name: req.body.name,
@@ -26,7 +35,7 @@ router.post('/', multer.upload.array('img', 6), async (req, res, next) => {
 			price: req.body.price,
 			category: mongoose.Types.ObjectId(req.body.category),
 			desc: req.body.desc,
-			img: paths
+			img: JSON.parse(paths)
 		},
 		(error, data) => {
 			if (error) {
