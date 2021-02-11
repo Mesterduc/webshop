@@ -8,12 +8,12 @@ export default {
 	mutations: {
 		setCategory(state, category) {
 			state.category = category
+			// console.log(category)
 		},
 	},
 	actions: {
 		getCategory({ commit }) {
 			axios.get('http://localhost:5000/category').then((res) => {
-				console.log(res.data)
 				commit('setCategory', res.data)
 			})
 		},
